@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach xmlns="http://peachfuzzer.com/2012/Peach" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://peachfuzzer.com/2012/Peach /peach/peach.xsd">
+	<!-- Import time for waiting -->
+	<Import import="time" />
+    <!-- First we create a model of TFTP spec -->
+    <DataModel name="tftp_model">
+        <Blob name="opcode" valueType="hex" value="00 02" mutable="false" token="true" />
+        <String name="filename" value="filename.txt" nullTerminated="true" />
+        <String name="mode" value="NETASCII" token="true" mutable="false" nullTerminated="true" />
+    </DataModel>
+
+    <!-- Then state, wait 1 sec before fuzz attempts cause remote -->
+    <StateModel name="TheState" initialState="Initial">
+        <State name="Initial">
+            <Action type="output" onComplete="time.sleep(1)">
+                <DataModel ref="tftp_model" />
+            </Action>
+        </State>
+    </StateModel>
+    
+    <!-- Agent will be launched on remote server with peach.exe -a tcp (default port is 9001) -->
+    <Agent name="RemoteAgent" location="tcp://192.168.84.25:9001">
+        <Monitor class="WindowsDebugger">
+                <Param name="CommandLine" value="C:\Program Files\TFTPServer\TFTPServerSP.exe -v" />
+                <Param name="WinDbgPath" value="C:\Program Files\Debugging Tools for Windows (x86)" />
+        </Monitor>
+	</Agent>
+   
+   <!-- the test case, start fuzzing filename var on the remote server -->
+    <Test name="Default">
+    	<Agent ref="RemoteAgent" />
+        <StateModel ref="TheState" />
+        <Publisher class="Udp">
+            <Param name="Host" value="192.168.84.25" />
+            <Param name="Port" value="69" />
+        </Publisher>
+        <Logger class="Filesystem">
+        	<Param name="Path" value="logs" />
+    	</Logger>
+    </Test>
+</Peach>
+<!-- end -->

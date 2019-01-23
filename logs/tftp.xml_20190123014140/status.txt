@@ -1,0 +1,46 @@
+Peach Fuzzing Run
+=================
+
+Date of run: 1/23/2019 1:41:40 AM
+Peach Version: 3.1.124.0
+Seed: 48694
+Command line: tftp.xml 
+Pit File: tftp.xml
+. Test starting: Default
+
+. Iteration 1 : 1/23/2019 1:41:41 AM
+. Iteration 1 of 4294967295 : 1/23/2019 1:41:43 AM
+! Fault detected at iteration 1 : 1/23/2019 1:41:44 AM
+. Iteration 1 of 4294967295 : 1/23/2019 1:41:46 AM
+! Fault detected at iteration 1 : 1/23/2019 1:41:51 AM
+! Fault detected at iteration 3 : 1/23/2019 1:41:54 AM
+! Fault detected at iteration 3 : 1/23/2019 1:42:01 AM
+! Fault detected at iteration 6 : 1/23/2019 1:42:04 AM
+! Fault detected at iteration 6 : 1/23/2019 1:42:11 AM
+! Fault detected at iteration 11 : 1/23/2019 1:42:16 AM
+! Fault detected at iteration 11 : 1/23/2019 1:42:24 AM
+! Fault detected at iteration 17 : 1/23/2019 1:42:30 AM
+! Fault detected at iteration 17 : 1/23/2019 1:42:37 AM
+! Fault detected at iteration 20 : 1/23/2019 1:42:40 AM
+! Fault detected at iteration 20 : 1/23/2019 1:42:48 AM
+! Fault detected at iteration 29 : 1/23/2019 1:42:57 AM
+! Fault detected at iteration 29 : 1/23/2019 1:43:04 AM
+! Fault detected at iteration 31 : 1/23/2019 1:43:06 AM
+! Fault detected at iteration 31 : 1/23/2019 1:43:14 AM
+! Fault detected at iteration 34 : 1/23/2019 1:43:17 AM
+! Fault detected at iteration 34 : 1/23/2019 1:43:24 AM
+! Fault detected at iteration 38 : 1/23/2019 1:43:28 AM
+! Fault detected at iteration 38 : 1/23/2019 1:43:36 AM
+! Fault detected at iteration 44 : 1/23/2019 1:43:42 AM
+! Fault detected at iteration 44 : 1/23/2019 1:43:49 AM
+! Fault detected at iteration 47 : 1/23/2019 1:43:52 AM
+! Fault detected at iteration 47 : 1/23/2019 1:43:59 AM
+! Fault detected at iteration 50 : 1/23/2019 1:44:03 AM
+! Fault detected at iteration 50 : 1/23/2019 1:44:10 AM
+! Fault detected at iteration 54 : 1/23/2019 1:44:14 AM
+! Fault detected at iteration 54 : 1/23/2019 1:44:21 AM
+! Fault detected at iteration 61 : 1/23/2019 1:44:29 AM
+! Fault detected at iteration 61 : 1/23/2019 1:44:36 AM
+! Fault detected at iteration 65 : 1/23/2019 1:44:40 AM
+! Fault detected at iteration 65 : 1/23/2019 1:44:48 AM
+! Fault detected at iteration 67 : 1/23/2019 1:44:50 AM
